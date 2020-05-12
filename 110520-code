@@ -1,6 +1,8 @@
 # FRA163 Pitching Machine Simulation Program
 import pygame as pg
 
+FONT = pg.font.SysFont('ocraextended', 18)
+
 PURPLE = (109, 55, 140)
 RED = (255, 89, 100)
 GREEN = (119, 224, 36)
