@@ -1,5 +1,6 @@
 # FRA163 Pitching Machine Simulation Program
 import pygame as pg
+pg.init()
 
 FONT = pg.font.SysFont('ocraextended', 18)
 
