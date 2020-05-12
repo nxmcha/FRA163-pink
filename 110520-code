@@ -1,2 +1,14 @@
 # FRA163 Pitching Machine Simulation Program
-import pygame
+import pygame as pg
+
+PURPLE = (109, 55, 140)
+RED = (255, 89, 100)
+GREEN = (119, 224, 36)
+ORANGE = (251, 176, 59)
+WHITE = (255, 255, 255)
+GRAY1 = (242, 242, 242)
+GRAY2 = (230, 230, 230)
+GRAY3 = (179, 179, 179)
+GRAY4 = (153, 153, 153)
+GRAY5 = (128, 128, 128)
+BLACK = (0, 0, 0)
