@@ -15,3 +15,32 @@ GRAY3 = (179, 179, 179)
 GRAY4 = (153, 153, 153)
 GRAY5 = (128, 128, 128)
 BLACK = (0, 0, 0)
+
+import math
+def CalculateAngle(x,z): #x=distance y=target velocity z=shooter Speed
+    check = (x * 9.81 * 3600) / ((z ** 2) * ((0.052) ** 2) * ((math.pi * 2) ** 2))
+    if -1 <=check<= 1 :
+        result = (math.asin(check)*(180/math.pi))/2
+        return result
+    else:
+        return "ERROR"
+print(CalculateAngle(3,1500))
+
+def CalculateVelocity(x,a): #x=distance y=target velocity a=angle
+    deg = (a) * 2 * (math.pi / 180)
+    if a<90 :
+        result = (math.sqrt(x*9.81)*60)/(2*math.pi*0.052*math.sqrt(math.sin(deg)))
+        return result
+    else:
+        return "ERROR"
+print(CalculateVelocity(3,13))
+
+def DelayTime(x,y,z,a,n): #x=distance y=target velocity z=shooter Speed a=angle n=sequence
+    # time = (x/(CalculateVelocity(x,a)*((2*math.pi)/60)*0.052*math.cos((CalculateAngle(x,z)*(math.pi/180)))))
+    # deltatime = time%(60/y)
+    # delay = (60/y)-deltatime+(15/y)*n
+    t = x/((z)*((2*math.pi)/60)*0.052*math.cos(a))
+    dt=t%(60/y)
+    det = (60/y)-dt+(15/y)*n
+    return det
+print(DelayTime(3,10,1500,33,1))
